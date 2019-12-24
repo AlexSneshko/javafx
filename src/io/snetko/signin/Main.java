@@ -12,7 +12,10 @@ public class Main extends Application {
     public void start(Stage primaryStage) throws Exception{
         Parent root = FXMLLoader.load(getClass().getResource("sign-in.fxml"));
         primaryStage.setTitle("Hello World");
-        primaryStage.setScene(new Scene(root, 600, 400));
+        Scene scene = new Scene(root, 600, 400);
+        primaryStage.setScene(scene);
+        String css = this.getClass().getResource("Login.css").toExternalForm();
+        scene.getStylesheets().add(css);
         primaryStage.show();
     }
 
