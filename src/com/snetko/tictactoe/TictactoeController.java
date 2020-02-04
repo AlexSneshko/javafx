@@ -27,8 +27,8 @@ public class TictactoeController {
             if (button.getText().equals("")) {
                button.setText(newPlayer);
                winnerChecker(newPlayer);
+               if (newPlayer.equals("X")) { newPlayer="O"; } else newPlayer="X";
             }
-        if (newPlayer.equals("X")) { newPlayer="O"; } else newPlayer="X";
         }
     }
 
